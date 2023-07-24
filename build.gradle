@@ -1,0 +1,59 @@
+plugins {
+    id 'org.springframework.boot' version '2.7.1'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+sourceCompatibility = 16
+targetCompatibility = 16
+
+group = 'org.digital.media'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+jar {
+    setArchivesBaseName("theatre-onboarding-service")
+}
+
+ext {
+    set('springCloudVersion', "2021.0.3")
+    swaggerVersion = '3.0.0'
+    cucumberVersion = '4.8.0'
+}
+
+dependencies {
+    implementation(
+            "org.springframework.boot:spring-boot-starter-actuator",
+            "org.springframework.boot:spring-boot-starter-web",
+            "io.springfox:springfox-swagger-ui:${swaggerVersion}",
+            "io.springfox:springfox-swagger2:${swaggerVersion}",
+            "io.springfox:springfox-spring-web:${swaggerVersion}",
+            "org.springframework.boot:spring-boot-starter-data-jpa",
+            "com.h2database:h2",
+            "org.springframework.boot:spring-boot-starter-data-jpa"
+    )
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    testImplementation(
+            "io.cucumber:cucumber-java:${cucumberVersion}",
+            "io.cucumber:cucumber-junit:${cucumberVersion}",
+            "io.cucumber:cucumber-spring:${cucumberVersion}"
+    )
+}
+
+test {
+    useJUnitPlatform()
+}
