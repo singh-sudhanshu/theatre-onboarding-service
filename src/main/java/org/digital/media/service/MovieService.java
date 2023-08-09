@@ -1,7 +1,7 @@
 package org.digital.media.service;
 
 import org.digital.media.connector.MovieRepository;
-import org.digital.media.model.Movie;
+import org.digital.media.model.entity.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

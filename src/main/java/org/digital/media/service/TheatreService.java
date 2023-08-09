@@ -2,8 +2,8 @@ package org.digital.media.service;
 
 import org.digital.media.connector.TheatreRepository;
 import org.digital.media.exception.TheatreNotFoundException;
-import org.digital.media.model.Theatre;
-import org.digital.media.model.TheatreResponse;
+import org.digital.media.model.entity.Theatre;
+import org.digital.media.model.response.TheatreResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

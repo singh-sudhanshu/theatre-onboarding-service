@@ -1,6 +1,6 @@
 package org.digital.media.controller;
 
-import org.digital.media.model.Movie;
+import org.digital.media.model.entity.Movie;
 import org.digital.media.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
