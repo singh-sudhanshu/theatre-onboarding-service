@@ -1,4 +1,4 @@
-package org.digital.media.model;
+package org.digital.media.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;

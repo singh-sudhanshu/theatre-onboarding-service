@@ -3,7 +3,7 @@ package org.digital.media.controller;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import org.digital.media.model.Theatre;
+import org.digital.media.model.entity.Theatre;
 import org.digital.media.service.TheatreService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
